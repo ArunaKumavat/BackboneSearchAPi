@@ -50,10 +50,14 @@ $(function( $ ) {
 			_.each(this.model.attributes, function (searchresults) {
 					_.each(searchresults, function (searchresult) {
 						if(searchresult.siteName && this.model.get('searchValue')){
-							if(searchresult.siteName.indexOf(this.model.get('searchValue')) > -1){
-								subElement.push( new app.searchResultView({model:searchresult}).render().el);
-								searchFound = true;
+							var searchvalue  = this.model.get('searchValue');
+							for (var i = 0; i < searchvalue.length; i++) {
+								if(searchresult.siteName.indexOf(searchvalue[i]) > -1){
+									var subview = new app.searchResultView({model:searchresult}).render().el;
+									searchFound = true;
+								}
 							}
+							subElement.push(subview);
 						}
 					},this);
 				if(searchFound === false) {
@@ -67,7 +71,7 @@ $(function( $ ) {
 
 		search: function(event){
 			event.preventDefault();
-			var search = this.$('#search').val().toLowerCase();
+			var search = this.$('#search').val().toLowerCase().split(',');
 			this._getSearch(search);
 		}
 
