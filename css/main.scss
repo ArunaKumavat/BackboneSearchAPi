@@ -1,0 +1,42 @@
+// Colors
+
+$Concrete: #f2f2f2;
+$Alto: #d8d8d8;
+
+html {
+	font-size: 12px;
+}
+
+body{
+	background: $Concrete;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header{
+	height: 3rem;
+	background: white;
+	border-bottom: 2px solid $Alto;
+}
+
+input {
+	display: block;
+	width: 100%;
+	padding: 2rem;
+	background-color: white;
+	border: 2px solid $Alto;
+
+	.error & {
+		border-color    : red;
+		background-color: pink;
+	}
+}
+
+footer {
+
+}
+.container {
+	width: 70rem;
+	margin: 3rem auto;
+}
+

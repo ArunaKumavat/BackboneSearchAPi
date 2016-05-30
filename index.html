@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+<header>
+
+</header>
+<div class="container">
+    <div class="search-container">
+        <form>
+            <input id="search" type="text">
+        </form>
+        <div class="search-list">
+
+        </div>
+    </div>
+</div>
+
+<footer>
+
+</footer>
+
+<script type="text/template" id="searchList-template">
+    <div class="searchList">
+       <a href="<%= siteUrl %>">
+        <%= siteName %>
+       </a>
+       <p><%= description %></p>
+    </div>
+</script>
+
+<script type="text/template" id="searchError-template">
+    <div class="searchError">
+        We currently don't have any results for your search, try another.
+    </div>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript" src="js/lib/backbone.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
+
