@@ -2,9 +2,22 @@
 
 $Concrete: #f2f2f2;
 $Alto: #d8d8d8;
+$ScienceBlue: #006dcc;
+$OsloGray: #919395;
 
 html {
 	font-size: 12px;
+}
+
+a{
+	color: $ScienceBlue;
+	text-decoration: none;
+	border-bottom: 1px solid $ScienceBlue;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
 }
 
 body{
@@ -16,15 +29,16 @@ body{
 header{
 	height: 3rem;
 	background: white;
-	border-bottom: 2px solid $Alto;
+	border-bottom: 1px solid $Alto;
 }
 
 input {
 	display: block;
 	width: 100%;
+	font-size: 16px;
 	padding: 2rem;
 	background-color: white;
-	border: 2px solid $Alto;
+	border: 1px solid $Alto;
 
 	.error & {
 		border-color    : red;
@@ -35,8 +49,23 @@ input {
 footer {
 
 }
+
 .container {
 	width: 70rem;
 	margin: 3rem auto;
 }
 
+.searchList{
+	padding: 3rem 0 0 0;
+	font-size: 16px;
+}
+
+.searchError {
+	border: 1px solid $Alto;
+	color: $OsloGray;
+	padding: 2rem;
+	margin: 2rem 0;
+	text-align: center;
+	width: 100%;
+	font-size: 16px;
+}
