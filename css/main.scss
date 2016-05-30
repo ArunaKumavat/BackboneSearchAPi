@@ -4,6 +4,7 @@ $Concrete: #f2f2f2;
 $Alto: #d8d8d8;
 $ScienceBlue: #006dcc;
 $OsloGray: #919395;
+$Shark: #2d2d2d;
 
 html {
 	font-size: 12px;
@@ -37,7 +38,7 @@ input {
 	width: 100%;
 	font-size: 16px;
 	padding: 2rem;
-	background-color: white;
+	background: white url("../img/search.png") no-repeat center right 2rem;
 	border: 1px solid $Alto;
 
 	.error & {
@@ -47,7 +48,11 @@ input {
 }
 
 footer {
-
+	position: fixed;
+	background: $Shark;
+	height: 10rem;
+	width: 100%;
+	bottom: 0;
 }
 
 .container {
